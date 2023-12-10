@@ -11,3 +11,5 @@ spring:
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+event-aggregator:
+  pool-size: 10

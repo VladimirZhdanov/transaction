@@ -1,6 +1,6 @@
 --docker run --name postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 
-create table user_table
+create table IF NOT EXISTS user_table
 (
     id   BIGSERIAL primary key,
     name varchar not null,

@@ -6,7 +6,6 @@ import org.springframework.retry.annotation.EnableRetry
 import org.springframework.scheduling.annotation.EnableAsync
 
 @SpringBootApplication
-@EnableAsync
 @EnableRetry
 class TransactionApplication
 

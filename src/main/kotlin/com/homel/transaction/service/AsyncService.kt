@@ -4,10 +4,13 @@ import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Service
 
 @Service
-class AsyncService(private val userUpdateService: UserUpdateService) {
+class AsyncService(
+    private val userUpdateServiceImpl: UserUpdateService,
+    //private val userUpdateServiceRetry: UserUpdateService,
+    ) {
 
     @Async
-    fun task(name: String) {
-        userUpdateService.updateLikes(name)
+    fun runTask(name: String) {
+        userUpdateServiceImpl.updateLikes(name)
     }
 }

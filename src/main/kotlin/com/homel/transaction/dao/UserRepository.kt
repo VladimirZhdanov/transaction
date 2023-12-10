@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.data.jpa.repository.Lock
 
 interface UserRepository: JpaRepository<User, Int>, JpaSpecificationExecutor<User>{
-    //@Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
     fun findByName(name: String): User?
 }
